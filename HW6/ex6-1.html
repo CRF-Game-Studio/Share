@@ -12,7 +12,20 @@
             <input type = "button" value = "submit" onclick= "Count()">
             Salary: <span id = "result"></span></p>
         </form>
-        <script>
+        
+        Number of people who earned slalries in the following ranges:<br>
+        <table>
+            <tr><th>(a) $200-$299     </th><td><div id="num_0"></div></td></tr>
+            <tr><th>(b) $300-$399     </th><td><div id="num_1"></div></td></tr>
+            <tr><th>(c) $400-$499     </th><td><div id="num_2"></div></td></tr>
+            <tr><th>(d) $500-$599     </th><td><div id="num_3"></div></td></tr>
+            <tr><th>(e) $600-$699     </th><td><div id="num_4"></div></td></tr>
+            <tr><th>(f) $700-$799     </th><td><div id="num_5"></div></td></tr>
+            <tr><th>(g) $800-$899     </th><td><div id="num_6"></div></td></tr>
+            <tr><th>(h) $900-$999     </th><td><div id="num_7"></div></td></tr>
+            <tr><th>(i) $1000 and over     </th><td><div id="num_8"></div></td></tr>
+        </table>
+		<script>
             window.onload = setTable;
             var sum = 0, input, earn, i;
             var salary_num=[0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -29,20 +42,8 @@
                 earn.innerHTML = 200 + input;
                 if(input >= 800)salary_num[9]++;
                 else salary_num[parseInt(input/100)]++;
-                
+                setTable();
             }
         </script>
-        Number of people who earned slalries in the following ranges:<br>
-        <table>
-            <tr><th>(a) $200-$299     </th><td><div id="num_0"></div></td></tr>
-            <tr><th>(b) $300-$399     </th><td><div id="num_1"></div></td></tr>
-            <tr><th>(c) $400-$499     </th><td><div id="num_2"></div></td></tr>
-            <tr><th>(d) $500-$599     </th><td><div id="num_3"></div></td></tr>
-            <tr><th>(e) $600-$699     </th><td><div id="num_4"></div></td></tr>
-            <tr><th>(f) $700-$799     </th><td><div id="num_5"></div></td></tr>
-            <tr><th>(g) $800-$899     </th><td><div id="num_6"></div></td></tr>
-            <tr><th>(h) $900-$999     </th><td><div id="num_7"></div></td></tr>
-            <tr><th>(i) $1000 and over     </th><td><div id="num_8"></div></td></tr>
-        </table>
     </body>
 </html>
