@@ -6,7 +6,6 @@ using namespace std;
 
 Department::Department(istream &infile)
 {
-	char buf[50];
     infile.getline(m_name, '\n'); // string m_name; ¾Ç°|¦WºÙ
 }
 

@@ -24,7 +24,7 @@ College::College(College& src){
 	strcpy(m_name,src.m_name);
 	int i;
 	for (i=0; i<(src.m_departments.end()-src.m_departments.begin()); i++){
-		m_departments.push_back(new Department(src.m_departments[i])); 
+		m_departments.push_back(new Department(&(src.m_departments[i]))); 
 	}
         
 }
