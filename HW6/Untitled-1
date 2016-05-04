@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            window.onload = shuffle();
+            function shuffle(){
+                var i;
+                var player = ["林益全","林智勝","胡金龍","高國輝","陳金鋒","彭政閔","鄭凱文"];
+                for(i = 0; i < player.length; i++){
+                    var ran = Math.floor(Math.random() * player.length);
+                    var temp = player[ran];
+                    player[ran] = player[i];
+                    player[i] = temp;
+                }
+                for(i = 0; i < player.length; i++){
+                    document.write("<img src = '" + player[i] + ".jpg'" +
+			                        "style = 'position: absolute; top: " + parseInt(Math.random() * 400) +
+			                        "px; left: " + parseInt(Math.random() * 400) + "px;'>");
+                }
+            }
+            console.log(document.body);
+        </script>
+    </head>
+</html>
