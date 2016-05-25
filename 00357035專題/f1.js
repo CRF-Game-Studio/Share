@@ -1,5 +1,5 @@
-function foo(input){
-    var return_obj={};
+exports.review = function(input) {
+    var return_obj = { };
     var fs = require("fs");
     var a = fs.readFileSync("word_gamedeal.txt", "utf-8");
     var target_msg = a.split("\r\n");
